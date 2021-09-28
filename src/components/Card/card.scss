@@ -1,0 +1,64 @@
+@import '../../mixins/mixins.scss';
+
+.card{
+    @include flex(column,720px,720px);
+    margin: 1rem auto;
+    .card-area{
+        @include flex(column,100%,100%);
+        justify-content: space-between;
+        border: 2px solid #c0e6fc;
+        border-radius: 0 0 0.5rem 0.5rem;
+        .form{
+            margin: 1.5rem 3rem;
+            @include flex(column, 75%, 100%);
+            .button-group{
+                @include flex(row,100%,auto);
+                justify-content: center;
+                align-items: center;
+                margin-left: 3rem;
+                button{
+                    font-size:1rem;
+                    border-radius: 0.5rem;
+                    border:$border;
+                    
+                    &:first-child{
+                        padding: 0.25rem;
+                        margin-right: 0.5rem;
+                        background:linear-gradient(
+                            180deg, rgba(52, 183, 89, 0.15) 0%, rgba(46, 164, 79, 0) 100%),#2ea44f;
+
+                        border-color: white;
+                        color:white;
+                    }
+                    &:last-child{
+                        padding: 0.25rem;
+                        margin-left: 0.5rem;
+                        background: white;
+                        border-color: white;
+                        color:red;
+                    }
+                }
+            }
+        }
+    }
+
+    label{
+        font-size:1.2rem;
+        font-weight: 500;
+        
+    }
+
+    .flex-row-input{
+        @include flex(row,100%,auto);
+        margin: 1rem 0 1rem;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+}
+
+.error{
+    margin-left:25%;
+    color:red;
+    font-sizE:0.75rem;
+}

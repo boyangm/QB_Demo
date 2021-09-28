@@ -1,0 +1,75 @@
+@import '../../mixins/mixins.scss';
+
+
+
+.input{
+
+   @include flex(row,100%,auto);
+   justify-content: space-between;
+   align-items: center;
+
+   &.text{
+    .qbInput{
+        width: 75%;
+    }
+   }
+
+   &.checkbox{
+       align-items: baseline;
+       .checkbox-field{
+        @include flex(row,75%,auto);
+        justify-content: space-between;
+        align-items: baseline;
+        label{
+            white-space: nowrap;
+            margin-right: 0.5rem;
+        }
+        .container {
+            @include flex(row, 100%, auto);
+            align-items: baseline;
+            input {
+                margin-right: 1rem;
+              }
+            .checkbox-required-label{
+                font-size:1.2rem;
+                margin-top: 0.25rem;
+                white-space: nowrap;
+            }
+    
+        }
+        label{
+        font-size: 1.2rem;
+        font-weight: bold;
+        }
+       }
+   }
+
+   &.select{
+       label{
+           &:nth-child(2){
+               @include default(block, 75%,auto);
+               select{
+                   width: 100%;
+                   padding: 1rem;
+                   border: $border;
+                   border-radius: 0.5rem;
+                   background-image:
+                   linear-gradient(45deg, transparent 50%, black 50%),
+                   linear-gradient(135deg, black 50%, transparent 50%),
+                   linear-gradient(to right, #e3e3e3e3, #e3e3e3e3);
+                 background-position:
+                 calc(100% - 8px) calc(1em + 9px), calc(100% - 4px) calc(1em + 9px), 100% 0;
+                 background-size:
+                   5px 5px,
+                   5px 5px,
+                   1.2rem 4rem;
+                 background-repeat: no-repeat;
+               }
+           }
+
+       }
+   }
+}
+
+
+

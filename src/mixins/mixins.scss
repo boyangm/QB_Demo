@@ -1,0 +1,23 @@
+@mixin default ($display, $width, $height) {
+    display: $display;
+    position: relative;
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($flow, $width, $height){
+    @include default(flex, $width, $height);
+    flex-flow: $flow;
+}
+$border: 3px solid #ced4da;
+
+.qbInput{
+    padding:0.5rem;
+    border-radius: 0.5rem;
+    border: $border;
+    width: 50%;
+  }
+
+  .builder-label{
+      white-space: nowrap;
+  }

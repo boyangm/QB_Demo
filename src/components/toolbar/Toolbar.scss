@@ -1,0 +1,17 @@
+.toolbar{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display:flex;
+    padding:1rem;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items:  center;
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    height: 3rem;
+    background-color: #c0e6fc;
+    color: #156d9e;
+    font-size: 1.5rem;
+    font-weight: bold;
+}

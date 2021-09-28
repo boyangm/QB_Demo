@@ -1,0 +1,70 @@
+@import '../../mixins/mixins.scss';
+
+
+.dropdownBuilder{
+    label{
+        white-space: nowrap;
+
+    }
+    @include flex(row,100%,auto);
+    .dropdown-field{
+        @include flex(row,75%,auto);
+        .qbInput{
+            width: 100%;
+            border-radius:0.5rem 0 0 0.5rem;
+        }
+        button{
+            border-radius: 0 0.5rem 0.5rem 0;
+            border: $border;
+            border-left: none;
+        }
+    }
+    .choices-area{
+        @include flex(column, 75%,200px);
+    }
+
+    &.input{
+        &:nth-child(2){
+            margin-top:2rem;
+            align-items:flex-start;
+            .choices-area{
+                @include flex(column,75%,100%);
+                margin-top: 0;
+                border:$border;
+                height: 200px;
+                overflow-y: scroll;
+                border-radius:0.5rem;
+                list-style-type: none;
+                padding-left: 0;
+                li{
+                    @include flex( row,100%,auto);
+                    align-items: center;;
+                    justify-content: space-between;
+                    padding: 1rem;
+                    &:hover{
+                        background-color: #e3e3e3;
+                        button{
+                            background-color: red;
+                            color: white;
+                        }
+                    }
+
+                    button{
+                        border:none;
+                        padding: 0.5rem;
+                        background-color: white;
+                        color:red;
+                        text-transform: uppercase;
+                        border-radius: 0.5rem;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
+.builder-field{
+    @include flex(column,100%,auto);
+}
